@@ -22,7 +22,7 @@ graph_attr = {
 }
 
 with Diagram("Banca Web", show=False, graph_attr=graph_attr):
-    net = Akamai("CDN+WAF+ANTIBOT") >> FrontDoors("bancaweb.pichincha.com") >> Nginx("sp001.pichincha.com") 
+    net = Akamai("CDN+WAF+ANTIBOT") >> FrontDoors("bancaweb.banco.com") >> Nginx("interno.banco.com") 
     
     with Cluster("Namespaces"):
          ns_group = [Namespace("Banca Web Blue"),Namespace("Banca Wevb Green")] 
